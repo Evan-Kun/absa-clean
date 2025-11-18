@@ -1,0 +1,63 @@
+
+Server Configuration
+
+Setup NVM for NODEJS
+1. sudo apt-get update   | Update Package Repository
+2. sudo apt install curl
+3. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+4. reopen terminal and check nvm --version to validate it's installed or not
+5. nvm install 20.14.0 
+
+Setup PM2 : to run web/api
+1. sudo npm install pm2 -g
+2. pm2 --version
+3. pm2 logs {id} - see list of process
+4. pm2 restart {id} - restart process
+5. pm2 list - list of all running process 
+6. pm2 save - to save list of process in one file.
+7. pm2 recurrent - it will run all process again which are saved while do pm2 save
+
+create directory
+
+/home/ubuntu/ -> talent-directory
+in this create three folders
+api,web and admin 
+
+API-Setup
+1.Install dependency
+	- goto api folder in terminal cd /home/ubuntu/talent-directory/api
+	- upload build folder of api 
+	- do npm install 
+2.Start process using pm2 
+	- pm2 start app.js --name='talent-dir-api'
+	- check process id and execute pm2 logs {id} to see running status
+
+Web-Setup
+1.Install dependency
+	- goto api folder in terminal cd /home/ubuntu/talent-directory/web
+	- upload build folder of web 
+	- do npm install 
+2.Start process using pm2 
+	- pm2 start server.js --name='talent-dir-web'
+	- check process id and execute pm2 logs {id} to see running status
+
+
+Admin Panel-Setup
+1.Install dependency
+	- goto api folder in terminal cd /home/ubuntu/talent-directory/admin
+	- upload build folder of admin 
+	- do npm install 
+2.Start process using pm2 
+	- pm2 start server.js --name='talent-dir-admin'
+	- check process id and execute pm2 logs {id} to see running status
+
+Web-Color setup
+	- Navigate to the web folder and open the file located at src/index.scss
+	- Update the following variables to customize the colors of the admin panel:
+		- Primary Color: Modify `$primary-color` to set the primary theme color.
+		- Secondary Color: Modify `$secondary-color` to set the secondary theme color.
+		- Toolbar Color: Modify `$toolbar-color` to set the toolbar color.
+
+Web-Logo setup
+	- Navigate to the web folder and open the file located at src/assets/images.
+	- Replace `logo.png`, `logo_black.png`, and `tf.png` with the actual files of the same names

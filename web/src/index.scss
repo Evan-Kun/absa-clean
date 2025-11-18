@@ -1,0 +1,58 @@
+$primary-color: #00cc83;
+$secondary-color: #204ecf;
+$toolbar-color: #0f256e;
+
+// extra
+$text-muted: #6c757d;
+$light-gray: lightgray;
+$white-color: white;
+$hightlight-color: #edf1fd;
+
+:root {
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --toolbar-color: #{$secondary-color};
+}
+
+
+// global css
+.text-primary {
+    color: $primary-color !important;
+}
+
+.backgroud-primary {
+    background-color: $primary-color !important;
+}
+
+.text-secondary {
+    color: $secondary-color !important;
+}
+
+.backgroud-secondary {
+    background-color: $toolbar-color !important;
+}
+
+.text-muted {
+    color: $text-muted !important
+}
+
+.text-white {
+    color: $white-color;
+}
+
+// 
+.small-font {
+    font-size: 12px;
+}
+
+.medium-font {
+    font-size: 14px;
+}
+
+.large-font {
+    font-size: 16px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

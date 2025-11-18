@@ -1,0 +1,55 @@
+@import '../../index.scss';
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    .card {
+        cursor: pointer;
+        opacity: 0.8;
+
+        .triangle-bottom-left {
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-right: 35px solid transparent;
+            border-bottom: 35px solid #ffffff;
+
+            .triangle-image {
+                transform: translate(-10%, 61%);
+            }
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+
+        .card-footer-custom {
+            padding: 10px;
+        }
+
+        &:hover {
+            opacity: 1;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            transition: transform 0.2s ease, opacity 0.3s ease, border 0.3s ease;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // @media (max-width: 576px) {
+    //     // grid-template-columns: 1fr;
+    // }
+}

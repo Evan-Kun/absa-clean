@@ -1,0 +1,106 @@
+// If you want to override variables do it here
+@import "variables";
+
+$primary : #0f256e;
+$primary-active : #00cc83;
+$secondary: #00cc83;
+$danger: #e55353;
+
+@import "@coreui/coreui/scss/coreui";
+@import "@coreui/chartjs/scss/coreui-chartjs";
+
+// Vendors
+@import "vendors/simplebar";
+
+// Custom styles for this theme
+@import "theme";
+
+// If you want to add custom CSS you can put it here
+@import "custom";
+
+
+.sidebar-dark {
+  background-color: $primary !important;
+
+  .nav-link {
+
+    &:hover {
+      background-color: $primary-active !important;
+    }
+  }
+
+  .nav-link.active {
+    background-color: $primary-active !important;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #0f256e;
+  width: 100%;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+  ;
+}
+
+.scroll-body {
+  overflow-y: auto;
+  max-height: 400px
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
+.table-wrapper {
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+  display: block;
+}
+
+.scrollable-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  /* Match your theme */
+  z-index: 2;
+}
+
+.count {
+  display: inline-block;
+  background-color: mix(white, $primary, 85%);
+  color: $primary !important;
+  border: 1px solid $primary;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-weight: 500;
+  min-width: 40px;
+}

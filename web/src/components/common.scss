@@ -1,0 +1,42 @@
+@import '../index.scss';
+
+.header {
+  background-color: $toolbar-color !important;
+  height: 65px;
+
+  .logo {
+    margin-right: 20px;
+    height: 50px;
+  }
+
+  .hire-btn {
+    padding: 10px 20px;
+  }
+
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+  }
+}
+
+.list-item {
+  color: black;
+  border-bottom: 1px solid lightgray;
+}
+
+.skill-tag-wrapper {
+  padding: 5px;
+
+  .tags {
+    border: 1px solid $light-gray;
+    cursor: pointer;
+    padding: 1px 10px;
+    margin: 5px 3px;
+    
+    &:hover {
+      background-color: $hightlight-color;
+    }
+  }
+
+}

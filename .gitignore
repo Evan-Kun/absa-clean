@@ -1,0 +1,7 @@
+admin/build
+admin/node_modules
+api/dist
+api/node_modules
+web/build
+web/node_modules
+
